@@ -1,0 +1,27 @@
+#summary modified partysip install guide
+
+You need to install the p2psip lib first. Then install the modified partysip as original one. 
+
+For linux
+
+install  p2psip lib:
+  enter p2psip directory
+
+  make
+
+  make install
+
+install partysip:
+
+Usual compilation process:
+
+  `cd' to the directory containing the package's source code
+
+  ./configure --disable-debug --disable-trace
+
+  make
+
+  make install
+
+
+
