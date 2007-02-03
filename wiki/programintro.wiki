@@ -13,7 +13,6 @@ The modified Partysip can run as a proxy defined in "[http://www.p2psip.org/draf
 
 * partysipconfig configuration guide
 
-** [Configuration guide for adaptor mode]
+** [AdaptorModeCfg Configuration guide for adaptor mode]
 
-** [Configuration guide for hierarchical proxy mode]
-
+** [HierarchicalProxyModeCfg Configuration guide for hierarchical proxy mode]
