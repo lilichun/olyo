@@ -10,7 +10,5 @@ The p2psip lib is a c lib providing interface to access a list of overlay. It is
 = modified Partysip =
 The modified Partysip can run as a proxy defined in "[http://www.p2psip.org/drafts/draft-shi-p2psip-hier-arch-00.html A Hierarchical P2P-SIP Architecture]" or a proxy defined in "[http://www.p2psip.org/drafts/draft-marocco-p2psip-interwork-00.html Interworking between P2PSIP Overlays and Conventional SIP Networks]". The modified Partysip can also run as an adaptor. The modified Partysip run in these mode at the same time. 
 
-* [partysipinstall installation guide]
-
-* [partysipconfig configuration guide]
-
+*[partysipinstall installation guide]
+*[partysipconfig configuration guide]
