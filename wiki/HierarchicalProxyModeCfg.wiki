@@ -1,9 +1,24 @@
-#Configuration Guide for Hierarchical Proxy Mode.
+Configuration Guide for Hierarchical Proxy Mode.
 
 This page gives a description on steps and commands necessary to configure and run modified Partysip in an hierarchical proxy mode. Corresponding reference information and
 examples are provided as well. 
 
 == Audience ==
-This page is intended for users who want to startup a hierarchical p2p architecture by Bamboo DHT and run the modified Partysip as a proxy, but are not necessarily familier with configuration of Bamboo and Partysip under this mode. In addition, some familiarity with P2PSIP, [basic knowledge on configuring Bamboo and Partysip], as well as the understanding of hierarchical proxy mode is required.
+This page is intended for users who want to startup Patysip as the proxy ofhierarchical p2p architecture over Bamboo DHT, but are not necessarily familier with configuration of Partysip. In addition, some familiarity with P2PSIP, understanding of hierarchical proxy mode, as well as [bambooCfg basic knowledge on configuring Bamboo]is required.
+
+== Configuration Instructions ==
+Here is a task list to configure and run modified Partysip as a hierarchical proxy.
+
+# Configure Bamboo and set up a hierarchical architecture. 
+
+# Configure Partysip as a hierarchical proxy mode.
+
+# Startup Partysip.
+
+=== Bamboo Configuration ===
+Details about Bamboo configuration can be attained [bambooCfg here]. See more specific instrutions on [http://bamboo-dht.org/users-guide.html Bamboo.org].
+
+
+
 
 
