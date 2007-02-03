@@ -1,4 +1,4 @@
-Configuration Guide for Adator Mode
+_Configuration Guide for Adator Mode_
 
 ==Objectives==
 This guide describes the steps and commands necessary to configure and run Partysip in an Adaptor Mode. Corresponding reference information and examples are provided as well.
@@ -20,11 +20,4 @@ overlay.
  # Start Adaptor: start Partysip and connect a SIP UA with it. Partysip
 is considered as an adaptor for the SIP UA to run over P2P network.
 
-Much more details are available on 
-
-
-
-
-
-
-adptorcfgguide.pdf
+Much more details are available on downloads: adptorcfgguide.pdf.
