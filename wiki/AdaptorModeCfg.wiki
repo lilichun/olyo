@@ -1,4 +1,4 @@
-_Configuration Guide for Adator Mode_
+#summary Configuration Guide for Adator Mode
 
 ==Objectives==
 This guide describes the steps and commands necessary to configure and run Partysip in an Adaptor Mode. Corresponding reference information and examples are provided as well.
