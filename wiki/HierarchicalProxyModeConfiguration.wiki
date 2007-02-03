@@ -1,15 +1,8 @@
-#summary One-sentence summary of this page.
+
 This page gives a description on steps and commands necessary to configure and run modified Partysip in an hierarchical proxy mode. Corresponding reference information and
 examples are provided as well. 
 
 == Audience ==
 This page is intended for users who want to startup a hierarchical p2p architecture by Bamboo DHT and run the modified Partysip as a proxy, but are not necessarily familier with configuration of Bamboo and Partysip under this mode. In addition, some familiarity with P2PSIP, [basic knowledge on configuring Bamboo and Partysip], as well as the understanding of hierarchical proxy mode is required.
 
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
 
