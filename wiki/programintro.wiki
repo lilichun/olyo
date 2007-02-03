@@ -1,4 +1,3 @@
-#summary introduction of our program
 = Introduction =
 
 Currently a p2psip lib, along with a modified Partysip is available for download. The modified Linphone is under testing. We will release it soon. 
