@@ -13,7 +13,7 @@ architecture of Adaptor Mode is required.
 Here is a task list to configure and run Partysip in an Adaptor Mode:
  # Configure Bamboo: edit arguments in Bamboo configurtion file used to join each node into the overlay.
  # Configure Partysip: edit arguments in Partysip configuration file used for communication with Bamboo.
- # Create a overlay: start Bamboo on each node and create a P2PSIP overlay.
+ # Create a overlay: start Bamboo on each node and create a P2P overlay.
  # Start Adaptor: start Partysip and connect a SIP UA with it. Partysip is considered as an adaptor for the SIP UA to run over P2P network.
 
 Much more details are available in [http://olyo.googlecode.com/files/adptorcfgguide.pdf adptorcfgguide.pdf].
