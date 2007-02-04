@@ -25,9 +25,8 @@ Locate inbound proxy of destination domain via DNS
   DNS_enable=on
 
 Locate inbound proxy of destination domain via top overlay
- # Start a hierarchical proxy
- # Add "useOProxy=yes" to the partysip configuration file
-
+ # Run a hierarchical proxy in local overlay
+ # Add "useOProxy=yes" to the adaptor(partysip) configuration file
 
 
 
