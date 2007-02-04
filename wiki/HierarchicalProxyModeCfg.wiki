@@ -1,4 +1,4 @@
-#summary Configuration Guide for Hierarchical Proxy Mode.
+#summary Configuration Guide for Hierarchical Proxy Mode.(unfinished)
 
 This page gives a description on steps and commands necessary to configure and run modified Partysip in an hierarchical proxy mode. Corresponding reference information and
 examples are provided as well. 
@@ -25,7 +25,6 @@ Details about Bamboo configuration can be attained [bambooCfg here]. See more sp
 || *Argument* || *Description* ||
 || *serverip* || *IP address of proxy* ||
 || *overlay* || *Arguments of overlays the proxy joining in* ||
-
 
 
 
