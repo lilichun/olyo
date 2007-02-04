@@ -10,10 +10,29 @@ and Partysip. In addition, some familiarity with P2PSIP, especially the
 architecture of Adaptor Mode is required.
 
 == Configuration Instructions ==
-Here is a task list to configure and run Partysip in an Adaptor Mode:
+*Here is a task list to configure and run Partysip in an Adaptor Mode:*
  # Configure Bamboo: edit arguments in Bamboo configurtion file used to join each node into the overlay.
  # Configure Partysip: edit arguments in Partysip configuration file used for communication with Bamboo.
  # Create a overlay: start Bamboo on each node and create a P2P overlay.
  # Start Adaptor: start Partysip and connect a SIP UA with it. Partysip is considered as an adaptor for the SIP UA to run over P2P network.
 
 Much more details are available in [http://olyo.googlecode.com/files/adptorcfgguide0204.pdf adptorcfgguide0204.pdf].
+
+*Enable adaptor to make a call to other domain(overlay)*
+
+Locate inbound proxy of destination domain via DNS
+ Add the line below to the partysip configuration file
+  DNS_enable=on
+
+Locate inbound proxy of destination domain via top overlay
+ # Start a hierarchical proxy
+ # Add "useOProxy=yes" to the partysip configuration file
+
+
+
+
+
+
+
+
+
