@@ -38,8 +38,7 @@ Start up Partysip as hierarchical proxy mode with the following command:
 partysip -f /<home>/<YOURCFGPATH>/adaptor.conf -d6
 }}}
 
-== Configuration Example ==
-
+== 4 Configuration Example ==
 
 
 
