@@ -41,12 +41,13 @@ partysip -f /<home>/<YOURCFGPATH>/adaptor.conf -d6
 == 4 Configuration Example ==
 In our example, two kinds of overlays are included: bottom level and high level.
 
-The first bottom overlay with the identifier {{{wti.bamboo}}} contains only one node whose id as well as gateway is 192.168.10.221:6630. See configure file [here]. The second overlay named {{{bupt.bamboo}}} also includes a single node. Its gateway and overlay id is 192.168.10.222:6630. See configure file [here]. The overlay id of high level overlay is {{{highlevel}}}. It contains two nodes: one has the id 192.168.10.221:3630, the other has the id 192.168.10.222:3630. The gateway of both nodes is 192.168.10.221:3630. See configure files on 192.168.10.221 [here] and 192.168.10.222 [here]. 
+The first bottom overlay with the identifier {{{wti.bamboo}}} contains only one node whose id as well as gateway is 192.168.10.221:6630. See configure file gatesay.cfg for 192.168.10.221. The second overlay named {{{bupt.bamboo}}} also includes a single node. Its gateway and overlay id is 192.168.10.222:6630. See configure file gateway.cfg for 192.168.10.222. The overlay id of high level overlay is {{{highlevel}}}. It contains two nodes: one has the id 192.168.10.221:3630, the other has the id 192.168.10.222:3630. The gateway of both nodes is 192.168.10.221:3630. See configure files on 192.168.10.221 gateway2.cfg and 192.168.10.222 gateway2.cfg. 
 
-There are two partysips linking to {{{wti.bamboo}}}. One runs as adaptor mode, connecting wti.bamboo through port 6632 and UA through port 8060. The other runs as hierarchical proxy with the port 3632 linking to the overlay {{{highlevel}}}. The configure files are [adptor.conf] and [partysip.conf].
+There are two partysips linking to {{{wti.bamboo}}}. One runs as adaptor mode, connecting wti.bamboo through port 6632 and UA through port 8060. The other runs as hierarchical proxy with the port 3632 linking to the overlay {{{highlevel}}}. The configure files are adptor.conf and partysip.conf.
 
-A single partysip acting as both a hierarchical proxy and an adaptor runs on 192.168.10.222. Through port 8060 it can be connected with UA while port 6632 to overlay {{{bupt.bamboo}}} and port 3632 to overlay {{{highlevel}}}. [Here] is the configure file for partysip. 
+A single partysip acting as both a hierarchical proxy and an adaptor runs on 192.168.10.222. Through port 8060 it can be connected with UA while port 6632 to overlay {{{bupt.bamboo}}} and port 3632 to overlay {{{highlevel}}}. The configure file for partysip is partysip.conf on 192.168.10.222.
 
+All the above-mentioned configure files can be downloaded [here].
 
 
 
