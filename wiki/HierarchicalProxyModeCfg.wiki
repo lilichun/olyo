@@ -21,6 +21,7 @@ Details about Bamboo configuration can be attained [bambooCfg here]. See more sp
 {{{ 
 /<home>/<YOURCFGPATH>/partysip.conf
 }}}
+
  # Edit following arguments as needed.
 || *Argument* || *Section* || *Description* ||
 || *serverip* || ** ||*IP address of proxy* ||
@@ -31,7 +32,13 @@ Details about Bamboo configuration can be attained [bambooCfg here]. See more sp
  ** overlay: the arguments of overlay as the format: {{{overlay [overlay id] [DHT type] [hierarchical level] [IP] [port].}}} For example, _overlay wti.bamboo bamboo 0 127.0.0.1 6632_ means that the overlay identifier is wit.bamboo, and the type of overlay is bamboo. 0 means overlay is the lowest level in hierarchical network whereas 1 means it is a higher overlay.  127.0.0.1 is the IP address of a Bamboo node, and 6632 is the port to establish TCP connection between Bamboo and Partysip. Note the port should be the same with that configured in Bamboo configuration file in the identical overlay. When running as a hierarchical proxy, the partysip should connect with both the lower and higher overlays, therefore require two lines for configuration, one of which has the "DHT type" 1, the other 0.
  ** isHProxy: Edit this line as "isHProxy = yes" to set the partysip running as a hierarchical proxy.
 
+=== 3 Partysip Startup ===
+Start up Partysip as hierarchical proxy mode with the following command:
+{{{
+partysip -f /<home>/<YOURCFGPATH>/adaptor.conf -d6
+}}}
 
+== Configuration Example ==
 
 
 
