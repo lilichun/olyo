@@ -47,7 +47,8 @@ There are two partysips linking to {{{wti.bamboo}}}. One runs as adaptor mode, c
 
 A single partysip acting as both a hierarchical proxy and an adaptor runs on 192.168.10.222. Through port 8060 it can be connected with UA while port 6632 to overlay {{{bupt.bamboo}}} and port 3632 to overlay {{{highlevel}}}. The configure file for partysip is partysip.conf on 192.168.10.222.
 
-All the above-mentioned configure files can be downloaded [here].
+All the above-mentioned configure files can be downloaded [http://olyo.googlecode.com/files/adptorcfgguide0204.pdf here].
+
 
 
 
