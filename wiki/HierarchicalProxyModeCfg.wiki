@@ -30,7 +30,7 @@ Details about Bamboo configuration can be attained [bambooCfg here]. See more sp
 || *isHProxy* || ** || *Indicating whether the partysip runs as a hierarchical proxy* || 
 
  ** serverip: The IP address of proxy server connecting lower overlay and higher overlay when the partysip runs as a hirarchical proxy.
- ** overlay: the arguments of overlay as the format: {{{overlay [overlay id] [DHT type] [hierarchical level] [IP] [port].}}} For example, _overlay wti.bamboo bamboo 0 127.0.0.1 6632_ means that the overlay identifier is wit.bamboo, and the type of overlay is bamboo. 0 means overlay is the lowest level in hierarchical network whereas 1 means it is a higher overlay.  127.0.0.1 is the IP address of a Bamboo node, and 6632 is the port to establish TCP connection between Bamboo and Partysip. Note the port should be the same with that configured in Bamboo configuration file in the identical overlay. When running as a hierarchical proxy, the partysip should connect with both the lower and higher overlays, therefore require two lines for configuration, one of which has the "DHT type" 1, the other 0.
+ ** overlay: the arguments of overlay as the format: {{{overlay [overlay id] [overlay type] [hierarchical level] [IP] [port].}}} For example, _overlay wti.bamboo bamboo 0 127.0.0.1 6632_ means that the overlay identifier is wit.bamboo, and the type of overlay is bamboo. 0 means overlay is the lowest level in hierarchical network whereas 1 means it is a higher overlay.  127.0.0.1 is the IP address of a Bamboo node, and 6632 is the port to establish TCP connection between Bamboo and Partysip. Note the port should be the same with that configured in Bamboo configuration file in the identical overlay. When running as a hierarchical proxy, the partysip should connect with both the lower and higher overlays, therefore require two lines for configuration, one of which has the "overlay type" 1, the other 0.
  ** isHProxy: Edit this line as "isHProxy = yes" to set the partysip running as a hierarchical proxy.
 
 === 3 Partysip Startup ===
@@ -49,7 +49,6 @@ There are two partysips linking to {{{wti.bamboo}}}. One runs as adaptor mode, c
 A single partysip acting as both a hierarchical proxy and an adaptor runs on 192.168.10.222. Through port 8060 it can be connected with UA while port 6632 to overlay {{{bupt.bamboo}}} and port 3632 to overlay {{{highlevel}}}. The configure file for partysip is partysip.conf on 192.168.10.222.
 
 All the above-mentioned configure files can be downloaded [http://olyo.googlecode.com/files/hproxycfg20070226.tar.gz here].
-
 
 
 
