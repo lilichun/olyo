@@ -1,6 +1,6 @@
 #summary modified partysip install guide
 
-You need to install the p2psip lib first. Then install the modified partysip as original one. 
+You need to install the p2psip lib and libssl-dev first. Then install the modified partysip as original one. 
 
 For linux
 
@@ -22,6 +22,4 @@ Usual compilation process:
   make
 
   make install
-
-
 
