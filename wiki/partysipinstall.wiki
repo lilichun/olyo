@@ -5,9 +5,9 @@ You need to install the p2psip lib. Then install the modified partysip as origin
 For linux
 
 install  p2psip lib:
-  install libssl-dev lib
+  # install libssl-dev lib
 
-  enter p2psip directory
+  # enter p2psip lib directory and run the commands below:
 
   make
 
