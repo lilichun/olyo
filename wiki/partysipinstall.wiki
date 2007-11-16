@@ -5,7 +5,7 @@ You need to install the p2psip lib. Then install the modified partysip as origin
 For linux
 
 install  p2psip lib:
-  # install libssl-dev lib
+  # install openssl lib (named libssl-dev in debian)
   # enter p2psip lib directory and run the commands below:
 
   make
@@ -18,7 +18,7 @@ Usual compilation process:
 
   `cd' to the directory containing the package's source code
 
-  ./configure --disable-debug --disable-trace
+  ./configure
 
   make
 
