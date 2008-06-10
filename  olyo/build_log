@@ -1,0 +1,351 @@
+Buildfile: build.xml
+
+clean-bundle-repositories:
+
+clean-test-reports:
+
+clean:
+
+init:
+    [mkdir] Created dir: E:\SIP_UA\sip-Communicator\doc\api
+    [mkdir] Created dir: E:\SIP_UA\sip-Communicator\sc-bundles
+    [mkdir] Created dir: E:\SIP_UA\sip-Communicator\sc-bundles\os-specific
+    [mkdir] Created dir: E:\SIP_UA\sip-Communicator\sc-bundles\os-specific\macosx
+    [mkdir] Created dir: E:\SIP_UA\sip-Communicator\sc-bundles\os-specific\linux
+    [mkdir] Created dir: E:\SIP_UA\sip-Communicator\sc-bundles\os-specific\windows
+    [mkdir] Created dir: E:\SIP_UA\sip-Communicator\test-reports
+    [mkdir] Created dir: E:\SIP_UA\sip-Communicator\test-reports\html
+    [mkdir] Created dir: E:\SIP_UA\sip-Communicator\log
+
+version:
+     [copy] Copying 1 file to E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\version
+    [javac] Compiling 3 source files to E:\SIP_UA\sip-Communicator\classes
+     [echo] SIP Communicator version 1.0-alpha3-0.build.by.Wang Yao
+
+compile:
+    [javac] Compiling 1081 source files to E:\SIP_UA\sip-Communicator\classes
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\MainFrame.java:1240: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_SOUTH 已过时
+    [javac]                     UIService.CONTAINER_CONTACT_LIST_SOUTH);
+    [javac]                              ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\MainFrame.java:1251: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_NORTH 已过时
+    [javac]                     UIService.CONTAINER_CONTACT_LIST_NORTH);
+    [javac]                              ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\MainFrame.java:1262: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_EAST 已过时
+    [javac]                     UIService.CONTAINER_CONTACT_LIST_EAST);
+    [javac]                              ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\MainFrame.java:1273: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_WEST 已过时
+    [javac]                     UIService.CONTAINER_CONTACT_LIST_WEST);
+    [javac]                              ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\MainFrame.java:1344: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_SOUTH 已过时
+    [javac]             UIService.CONTAINER_CONTACT_LIST_SOUTH))
+    [javac]                      ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\MainFrame.java:1350: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_NORTH 已过时
+    [javac]             UIService.CONTAINER_CONTACT_LIST_NORTH))
+    [javac]                      ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\MainFrame.java:1356: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_EAST 已过时
+    [javac]             UIService.CONTAINER_CONTACT_LIST_EAST))
+    [javac]                      ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\MainFrame.java:1362: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_WEST 已过时
+    [javac]             UIService.CONTAINER_CONTACT_LIST_WEST))
+    [javac]                      ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\MainFrame.java:1382: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_SOUTH 已过时
+    [javac]             || containerID.equals(UIService.CONTAINER_CONTACT_LIST_SOUTH)
+    [javac]                                            ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\MainFrame.java:1383: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_NORTH 已过时
+    [javac]             || containerID.equals(UIService.CONTAINER_CONTACT_LIST_NORTH)
+    [javac]                                            ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\MainFrame.java:1384: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_EAST 已过时
+    [javac]             || containerID.equals(UIService.CONTAINER_CONTACT_LIST_EAST)
+    [javac]                                            ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\MainFrame.java:1385: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_WEST 已过时
+    [javac]             || containerID.equals(UIService.CONTAINER_CONTACT_LIST_WEST))
+    [javac]                                            ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\chat\ChatWindow.java:654: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CHAT_WINDOW_SOUTH 已过时
+    [javac]                 .getComponentsForContainer(UIService.CONTAINER_CHAT_WINDOW_SOUTH);
+    [javac]                                                     ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\chat\ChatWindow.java:704: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CHAT_WINDOW_SOUTH 已过时
+    [javac]         if (c.getContainer().equals(UIService.CONTAINER_CHAT_WINDOW_SOUTH))
+    [javac]                                              ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\chat\ChatWindow.java:724: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CHAT_WINDOW_SOUTH 已过时
+    [javac]         if (c.getContainer().equals(UIService.CONTAINER_CHAT_WINDOW_SOUTH)
+    [javac]                                              ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\UIServiceImpl.java:134: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 removeComponent(net.java.sip.communicator.service.gui.Container,java.lang.Object) 已过时
+    [javac]     public void removeComponent(Container containerID, Object component)
+    [javac]                 ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\UIServiceImpl.java:274: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 addComponent(net.java.sip.communicator.service.gui.Container,java.lang.String,net.java.sip.communicator.service.gui.ContactAwareComponent) 已过时
+    [javac]     public void addComponent(Container containerID, String constraint,
+    [javac]                 ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\UIServiceImpl.java:226: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 addComponent(net.java.sip.communicator.service.gui.Container,java.lang.String,java.lang.Object) 已过时
+    [javac]     public void addComponent(Container containerID, String constraint,
+    [javac]                 ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\UIServiceImpl.java:245: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 addComponent(net.java.sip.communicator.service.gui.Container,net.java.sip.communicator.service.gui.ContactAwareComponent) 已过时
+    [javac]     public void addComponent(Container containerID,
+    [javac]                 ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\UIServiceImpl.java:174: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 addComponent(net.java.sip.communicator.service.gui.Container,java.lang.Object) 已过时
+    [javac]     public void addComponent(Container containerID, Object component)
+    [javac]                 ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\UIServiceImpl.java:68: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CHAT_WINDOW_SOUTH 已过时
+    [javac]         supportedContainers.add(UIService.CONTAINER_CHAT_WINDOW_SOUTH);
+    [javac]                                          ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\UIServiceImpl.java:69: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_EAST 已过时
+    [javac]         supportedContainers.add(UIService.CONTAINER_CONTACT_LIST_EAST);
+    [javac]                                          ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\UIServiceImpl.java:70: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_WEST 已过时
+    [javac]         supportedContainers.add(UIService.CONTAINER_CONTACT_LIST_WEST);
+    [javac]                                          ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\UIServiceImpl.java:71: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_SOUTH 已过时
+    [javac]         supportedContainers.add(UIService.CONTAINER_CONTACT_LIST_SOUTH);
+    [javac]                                          ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\UIServiceImpl.java:72: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_LIST_NORTH 已过时
+    [javac]         supportedContainers.add(UIService.CONTAINER_CONTACT_LIST_NORTH);
+    [javac]                                          ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\menus\ExtendedQuickMenu.java:478: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_MAIN_TOOL_BAR 已过时
+    [javac]                     UIService.CONTAINER_MAIN_TOOL_BAR);
+    [javac]                              ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\impl\gui\main\menus\QuickMenu.java:449: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_MAIN_TOOL_BAR 已过时
+    [javac]                     UIService.CONTAINER_MAIN_TOOL_BAR);
+    [javac]                              ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\plugin\exampleplugin\ExamplePluginActivator.java:24: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_RIGHT_BUTTON_MENU 已过时
+    [javac]             UIService.CONTAINER_CONTACT_RIGHT_BUTTON_MENU))
+    [javac]                      ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\plugin\exampleplugin\ExamplePluginActivator.java:29: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 CONTAINER_CONTACT_RIGHT_BUTTON_MENU 已过时
+    [javac]                 UIService.CONTAINER_CONTACT_RIGHT_BUTTON_MENU,
+    [javac]                          ^
+    [javac] E:\SIP_UA\sip-Communicator\src\net\java\sip\communicator\plugin\exampleplugin\ExamplePluginActivator.java:28: 警告： [deprecation] net.java.sip.communicator.service.gui.UIService 中的 addComponent(net.java.sip.communicator.service.gui.Container,net.java.sip.communicator.service.gui.ContactAwareComponent) 已过时
+    [javac]             uiService.addComponent(
+    [javac]                      ^
+    [javac] 注意： 某些输入文件使用了未经检查或不安全的操作。
+    [javac] 注意： 要了解详细信息，请使用 -Xlint:unchecked 重新编译。
+    [javac] 30 警告
+
+resource:
+     [copy] Copying 259 files to E:\SIP_UA\sip-Communicator\classes
+     [copy] Copying 485 files to E:\SIP_UA\sip-Communicator\classes\resources
+     [copy] Copied 50 empty directories to 2 empty directories under E:\SIP_UA\sip-Communicator\classes\resources
+
+native2ascii:
+[native2ascii] Converting 30 files from E:\SIP_UA\sip-Communicator\resources\languages to E:\SIP_UA\sip-Communicator\classes\resources\languages
+
+bundle-util:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\util.jar
+
+bundle-configuration:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\configuration.jar
+
+bundle-configuration-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\configuration-slick.jar
+
+bundle-history:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\history.jar
+
+bundle-history-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\history-slick.jar
+
+bundle-messagehistory:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\msghistory.jar
+
+bundle-msghistory-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\msghistory-slick.jar
+
+bundle-callhistory:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\callhistory.jar
+
+bundle-callhistory-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\callhistory-slick.jar
+
+bundle-netaddr:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\netaddr.jar
+
+bundle-netaddr-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\netaddr-slick.jar
+
+bundle-slickless:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\slickless.jar
+
+bundle-slick-runner:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\slick-runner.jar
+
+bundle-sip:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-sip.jar
+
+bundle-sip-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-sip-slick.jar
+
+bundle-fileaccess:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\fileaccess.jar
+
+bundle-fileaccess-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\fileaccess-slick.jar
+
+bundle-media:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\os-specific\windows\media.jar
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\os-specific\linux\media.jar
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\os-specific\macosx\media.jar
+
+bundle-media-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\media-slick.jar
+
+bundle-protocol:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol.jar
+
+bundle-icq:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-icq.jar
+
+bundle-icq-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-icq-slick.jar
+
+bundle-mock:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-mock.jar
+
+bundle-smacklib:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\smacklib.jar
+
+bundle-jabber:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-jabber.jar
+
+bundle-jabber-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-jabber-slick.jar
+
+bundle-swing-ui:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\swing-ui.jar
+
+bundle-msn:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-msn.jar
+
+bundle-msn-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-msn-slick.jar
+
+bundle-yahoo:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-yahoo.jar
+
+bundle-yahoo-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-yahoo-slick.jar
+
+bundle-contactlist:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\contactlist.jar
+
+meta-contactlist:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\meta-cl.jar
+
+meta-contactlist-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\meta-cl-slick.jar
+
+bundle-plugin-icqaccregwizz:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\icqaccregwizz.jar
+
+bundle-plugin-jabberaccregwizz:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\jabberaccregwizz.jar
+
+bundle-plugin-msnaccregwizz:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\msnaccregwizz.jar
+
+bundle-plugin-sipaccregwizz:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\sipaccregwizz.jar
+
+bundle-plugin-yahooaccregwizz:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\yahooaccregwizz.jar
+
+bundle-plugin-aimaccregwizz:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\aimaccregwizz.jar
+
+bundle-version:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\version.jar
+
+bundle-version-impl:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\version-impl.jar
+
+bundle-shutdown:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\shutdown.jar
+
+bundle-growlnotification:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\os-specific\macosx\growlnotification.jar
+
+bundle-audionotifier:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\audionotifier.jar
+
+bundle-plugin-branding:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\branding.jar
+
+bundle-systray:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\systray.jar
+
+bundle-browserlauncher:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\browserlauncher.jar
+
+bundle-gibberish:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-gibberish.jar
+
+bundle-gibberish-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-gibberish-slick.jar
+
+bundle-plugin-gibberishaccregwizz:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\gibberishaccregwizz.jar
+
+bundle-plugin-extended-callhistory-search:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\extendedcallhistorysearch.jar
+
+bundle-rss:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-rss.jar
+
+bundle-rss-slick:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-rss-slick.jar
+
+bundle-plugin-rssaccregwizz:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\rssaccregwizz.jar
+
+bundle-zeroconf:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-zeroconf.jar
+
+bundle-plugin-zeroconfaccregwizz:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\zeroconfaccregwizz.jar
+
+bundle-plugin-whiteboard:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\whiteboard.jar
+
+bundle-irc:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-irc.jar
+
+bundle-plugin-ircaccregwizz:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\ircaccregwizz.jar
+
+bundle-pluginmanager:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\pluginmanager.jar
+
+bundle-notification:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\notification.jar
+
+bundle-ssh:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-ssh.jar
+
+bundle-plugin-sshaccregwizz:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\sshaccregwizz.jar
+
+bundle-contacteventhandler:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\contacteventhandler.jar
+
+bundle-plugin-contactinfo:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\contactinfo.jar
+
+bundle-plugin-accountinfo:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\accountinfo.jar
+
+bundle-plugin-chatalerter:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\chatalerter.jar
+
+bundle-updatecheckplugin:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\updatechecker.jar
+
+bundle-p2psip:
+      [jar] Building jar: E:\SIP_UA\sip-Communicator\sc-bundles\protocol-p2psip.jar
+
+bundles:
+
+package:
+
+make:
+
+rebuild:
+     [echo] ver=1.0-alpha3-0.build.by.Wang Yao
+
+BUILD SUCCESSFUL
+Total time: 47 seconds

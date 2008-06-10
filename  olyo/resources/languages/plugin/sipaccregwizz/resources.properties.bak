@@ -1,0 +1,34 @@
+protocolName=SIP/P2PSIP
+protocolDescription=The SIP/P2PSIP protocol
+uin=SIP/P2PSIP id
+password=Password
+rememberPassword=Remember password
+uinAndPassword=User name and password
+advancedOptions=Advanced Options
+ovverideServerOps=Override server default options
+registrar=Registrar
+serverPort=Server port
+proxy=Proxy
+proxyPort=Proxy port
+preferredTransport=Preferred transport
+yes=Yes
+no=No
+existingAccount=* The account you entered is already installed.
+enablePresence=Enable presence (SIMPLE)
+forceP2PPresence=Force peer-to-peer presence mode
+offlineContactPollingPeriod=Offline contacts polling period (in s.)
+subscriptionExpiration=Default subscription duration (in s.)
+presenceOptions=Presence Options
+error=Error
+summary=Summary
+keepAlive=Keep alive
+keepAliveMethod=Keep alive method
+keepAliveInterval=Keep alive interval
+keepAliveIntervalEx=Between 1 and 3600 seconds
+
+enableP2PSIP=Enable P2PSIP
+
+enablePassCheck=Enable PassCheck
+
+register=REGISTER
+options=OPTIONS

@@ -1,0 +1,8 @@
+15:11 2008-4-22
+ProtocolProviderServiceSipImpl 735 增加了打印forceP2P变量的log
+
+15:49 2008-4-24
+至此：电话、IM已经完全畅通
+遗留问题
+1.DHT中多地址问题不能解决。
+2.Presence互相不兼容；
