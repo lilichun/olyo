@@ -1,0 +1,27 @@
+2008-1-4 11:06:12 ow.messaging.udp.UDPMessageReceiver punchHole
+少御: Could not receive an PUNCH_HOLE_REP message for UDP hole punching: (not resolved)/59.64.183.137:3997 on (not resolved)/123.116.135.14:13997
+2008-01-04 11:06:13.644::INFO:  Logging to STDERR via org.mortbay.log.StdErrLog
+2008-01-04 11:06:13.660::INFO:  jetty-6.1.6
+2008-01-04 11:06:13.769::INFO:  Started SocketConnector@0.0.0.0:3998
+2008-1-4 11:06:16 ow.routing.linearwalker.LinearWalker connectToSuccessor
+少御: Failed to send a REQ_CONNECT msg or receive a REP_CONNECT msg.
+java.io.IOException: Timeout:3000 msec.
+	at ow.messaging.udp.UDPMessageSender.sendAndReceive(UDPMessageSender.java:229)
+	at ow.routing.linearwalker.LinearWalker.connectToSuccessor(LinearWalker.java:293)
+	at ow.routing.linearwalker.LinearWalker.connectToSuccessorList(LinearWalker.java:337)
+	at ow.routing.linearwalker.LinearWalker.access$300(LinearWalker.java:49)
+	at ow.routing.linearwalker.LinearWalker$Stabilizer.run(LinearWalker.java:470)
+	at ow.util.Timer$TimerThread.run(Timer.java:277)
+	at java.lang.Thread.run(Unknown Source)
+2008-1-4 11:06:16 ow.routing.impl.AbstractRoutingAlgorithm fail
+少御: RoutingAlgorithm#fail: (not resolved)/59.64.183.137:3997 on 123.116.135.14/123.116.135.14:13997 1 time, and forget it.
+2008-1-4 11:06:16 ow.routing.linearwalker.LinearWalker$Stabilizer run
+少御: connectToSuccessor() failed.
+java.io.IOException: Timeout:3000 msec.
+	at ow.messaging.udp.UDPMessageSender.sendAndReceive(UDPMessageSender.java:229)
+	at ow.routing.linearwalker.LinearWalker.connectToSuccessor(LinearWalker.java:293)
+	at ow.routing.linearwalker.LinearWalker.connectToSuccessorList(LinearWalker.java:337)
+	at ow.routing.linearwalker.LinearWalker.access$300(LinearWalker.java:49)
+	at ow.routing.linearwalker.LinearWalker$Stabilizer.run(LinearWalker.java:470)
+	at ow.util.Timer$TimerThread.run(Timer.java:277)
+	at java.lang.Thread.run(Unknown Source)

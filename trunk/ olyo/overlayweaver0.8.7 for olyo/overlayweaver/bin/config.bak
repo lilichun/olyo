@@ -1,0 +1,4 @@
+enable_owdhtshell=on
+owdhtshell_parameter=owdhtshell -x -no-upnp -a Kademlia 
+partysip_dir=..\\..\\partysip
+partysip_parameter=partysip.exe -f adaptor.conf

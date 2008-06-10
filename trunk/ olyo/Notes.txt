@@ -1,0 +1,37 @@
+net.java.sip.communicator.impl.protocol.sip.AddressResolverImpl
+	实现了gov.nist.core.net.AddressResolver接口（这个接口是JAIN-SIP定义的）
+	其中的public Hop resolveAddress(Hop inputAddress)方法实现了对目标用户URI的解析
+
+	解析方法：
+	1.首先在输入的目的用户的域名前添加"_sip._udp."
+	2.通过DNS查询下一跳（调用NetworkUtils.getSRVRecords实现），
+		2.1如果查询到目的域的Proxy列表，返回列表中第一个Proxy（列表中的Proxy排序按照DNS SRV值）
+		2.2如果查询不到目的域的Proxy列表，且输入的地址中包含了一个合法的端口号，则返回输入地址；
+		2.3如果2.2也不满足，则返回输入地址和默认端口号
+
+net.java.sip.communicator.impl.protocol.sip.SipRegistrarConnection
+	在void register()函数中实现了注册功能：启动一个Register Transaction，用这个transaction向注册服务器发送注册请求。
+
+编译、运行较为容易
+
+制作安装包的过程比较复杂
+	http://www.sip-communicator.org/index.php/Documentation/HowToBuildAnInstaller
+	上面的教程比较抽象，只能参考，不具备操作性
+	打包过程需要用到IzPack installers软件，这个工具需要单独研究
+
+调用过程
+ProtocolProviderServiceSipImpl中的register()调用SipRegistrarConnection.register()
+
+net.java.sip.communicator.impl.gui.main.login.LoginManager 的run()方法调用了protocolProvider.register(secAuth),其中ProtocolProviderService是ProtocolProviderServiceSipImpl的基类
+
+生成过程
+ProtocolProviderServiceSipImpl中的initialize()=>initRegistrarConnection() Line 1924生成了一个SipRegistrarConnection对象用来注册
+
+ProtocolProviderFactorySipImpl 中 installAccount()=>loadAccount()调用了ProtocolProviderServiceSipImpl中的initialize()
+
+SIPAccountRegistrationWizard.finish() => SIPAccountRegistrationWizard.installAccount()调用了ProtocolProviderFactorySipImpl.installAccount
+
+net.java.sip.communicator.impl.gui.main.account.AccountRegSummaryPage 中 PageNext()方法调用了AccountRegistrationWizard.finish，其中AccountRegistrationWizard是SIP AccountRegistrationWizard的基类
+
+
+		
