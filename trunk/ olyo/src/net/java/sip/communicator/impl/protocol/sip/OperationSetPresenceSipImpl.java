@@ -35,6 +35,7 @@ import net.java.sip.communicator.util.xml.*;
  *
  * @author Benoit Pradelle
  * @author Dong Fengyu
+ * @New
  */
 public class OperationSetPresenceSipImpl
     implements OperationSetPersistentPresence, SipListener
