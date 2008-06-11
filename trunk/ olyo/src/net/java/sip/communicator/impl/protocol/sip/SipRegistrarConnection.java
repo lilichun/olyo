@@ -154,51 +154,51 @@ public class SipRegistrarConnection
         throws ParseException
     {
         this.sipProvider = sipProviderCallback;
-	/**
+        /**
          * Added by WangYao
          *Added if-else sentence by Dong Fengyu
          */	
-      if (false==sipProvider.isP2PSIP()){
-	this.registrarAddress = registrarAddress;
-       	}
-        
-        else{
-        try{
-        	this.registrarAddress = InetAddress.getLocalHost();
-        }catch(UnknownHostException e){
-        	logger.error("Cannot get IP address of Local Host", e);
-        	throw new ParseException("Cannot get IP address of Local Host", -1);
+        if (false==sipProvider.isP2PSIP()){
+        	this.registrarAddress = registrarAddress;
         }
+
+        else{
+        	try{
+        		this.registrarAddress = InetAddress.getLocalHost();
+        	}catch(UnknownHostException e){
+        		logger.error("Cannot get IP address of Local Host", e);
+        		throw new ParseException("Cannot get IP address of Local Host", -1);
+        	}
         }	
-        
+
         registrarURI = sipProvider.getAddressFactory().createSipURI(
-                null, this.registrarAddress.getHostName());
+        		null, this.registrarAddress.getHostName());
 
         if(registrarPort != ListeningPoint.PORT_5060)
-            registrarURI.setPort(registrarPort);
+        	registrarURI.setPort(registrarPort);
 
         registrarURI.setTransportParam(registrationTransport);
-        
-        
+
+
         this.registrationsExpiration = expirationTimeout;
 
         //now let's register ourselves as processor for REGISTER related
         //messages.
         sipProviderCallback.registerMethodProcessor(Request.REGISTER, this);
-        
+
         /**
          * Added by WangYao
          * Added the if-sentence by Dong Fengyu
          */
         if(sipProvider.isP2PSIP()){
-        try {
-			dhtAccessor = new DHTAccessServiceImpl();
-		} catch (MalformedURLException e) {
-			//this should never happen
-			logger.error("exception in DHTAccessServiceImpl()", e);
-		}
-    }
-    	}		
+        	try {
+        		dhtAccessor = new DHTAccessServiceImpl();
+        	} catch (MalformedURLException e) {
+        		//this should never happen
+        		logger.error("exception in DHTAccessServiceImpl()", e);
+        	}
+        }
+    }		
 
     /**
      * Sends the REGISTER request to the server specified in the constructor.

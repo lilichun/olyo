@@ -2056,11 +2056,14 @@ public class ProtocolProviderServiceSipImpl
                 useRoute = new Boolean(useRouteString).booleanValue();
             
             this.sipRegistrarConnection.setRouteHeaderEnabled(useRoute);
+            logger.info("(sipRegistrarConnection == null) =" + (sipRegistrarConnection == null));
         }
         catch (ParseException ex)
         {
             //this really shouldn't happen as we're using InetAddress-es
-            logger.error("Failed to create a registrar connection with "
+            logger.info("ParseException is caught");
+            logger.info("(registrarAddress == null) =" + (registrarAddress == null));
+        	logger.error("Failed to create a registrar connection with "
                 +registrarAddress.getHostAddress()
                 , ex);
             throw new IllegalArgumentException(
