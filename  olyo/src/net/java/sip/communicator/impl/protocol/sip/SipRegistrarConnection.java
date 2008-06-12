@@ -311,6 +311,47 @@ public class SipRegistrarConnection
         
         int ttl = expHeader.getExpires();
         logger.info("TTL = " + ttl);
+
+/**
+    * before put the new k-v in DHT,be sure there is no k-v remain in DHT.
+    * Added by Dong Fengyu
+    *
+    */
+
+   
+                    
+	 Set resultSet = null;
+        try{
+        	resultSet = dhtAccessor.get(userName);
+        }catch (Exception e) {
+        	//There is exception in DHT GET operation
+        	logger.error("Exception in DHT Operation: " + e.getMessage(), e);
+        }
+         if (0 == resultSet.size()){
+        	logger.info("No result found in DHT. key = " + userName);
+        }else{	 
+        String valueFromDHT = null;	
+	
+        for(Iterator it = resultSet.iterator(); it.hasNext();){
+        	valueFromDHT = new String((byte[])it.next());
+
+		logger.info("detect a value From DHT="+valueFromDHT);
+		
+	  //remove this old k-v pair remain in dht before put a new k-v pair
+	
+		try
+		{
+		dhtAccessor.remove(userName,valueFromDHT,DHT_SECRET_STR);
+		}catch(Exception e){
+        	throw new OperationFailedException(
+        			"DHT remove() failed", 
+        			OperationFailedException.INTERNAL_ERROR,
+        			e);
+              }
+        }
+        	}
+
+       //put a new k-v pair
         
         try{
         	dhtAccessor.put(userName, userContactAddr, ttl, DHT_SECRET_STR);
