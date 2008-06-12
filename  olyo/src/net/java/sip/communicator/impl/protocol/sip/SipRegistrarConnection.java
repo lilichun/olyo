@@ -191,8 +191,19 @@ public class SipRegistrarConnection
              
             logger.info("this.registrarAddress.getHostName()=" + this.registrarAddress.getHostName());
             
-            registrarURI = sipProvider.getAddressFactory().createSipURI(
-                     null, this.registrarAddress.getHostName());
+            try{
+            	registrarURI = sipProvider.getAddressFactory().createSipURI(
+            			null, this.registrarAddress.getHostName());
+            }catch(ParseException e){
+            	String localIPStr = this.registrarAddress.getHostAddress();
+            	if (NetworkUtils.isDecimalDotFormatIPv4Addr(localIPStr)){
+            		registrarURI = sipProvider.getAddressFactory().createSipURI(
+                			null, localIPStr);
+            	}else{
+            		registrarURI = sipProvider.getAddressFactory().createSipURI(
+                			null, "127.0.0.1");
+            	}
+            }
          	
          	logger.info("registrarURI" + registrarURI);
 
