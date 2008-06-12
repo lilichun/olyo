@@ -153,51 +153,64 @@ public class SipRegistrarConnection
                                   ProtocolProviderServiceSipImpl sipProviderCallback)
         throws ParseException
     {
-        this.sipProvider = sipProviderCallback;
-        /**
-         * Added by WangYao
-         *Added if-else sentence by Dong Fengyu
-         */	
-        if (false==sipProvider.isP2PSIP()){
-        	this.registrarAddress = registrarAddress;
-        }
+    	 this.sipProvider = sipProviderCallback;
+  
+      
+         if (false == sipProvider.isP2PSIP()){
+         	//SIP mode
+         	this.registrarAddress = registrarAddress;
+         	
+         	registrarURI = sipProvider.getAddressFactory().createSipURI(
+                     null, this.registrarAddress.getHostName());
+         	
+         	logger.info("registrarURI" + registrarURI);
 
-        else{
-        	try{
-        		this.registrarAddress = InetAddress.getLocalHost();
-        	}catch(UnknownHostException e){
-        		logger.error("Cannot get IP address of Local Host", e);
-        		throw new ParseException("Cannot get IP address of Local Host", -1);
-        	}
-        }	
+             if(registrarPort != ListeningPoint.PORT_5060)
+                 registrarURI.setPort(registrarPort);
 
-        registrarURI = sipProvider.getAddressFactory().createSipURI(
-        		null, this.registrarAddress.getHostName());
+             registrarURI.setTransportParam(registrationTransport);
+             
+             
+             this.registrationsExpiration = expirationTimeout;
 
-        if(registrarPort != ListeningPoint.PORT_5060)
-        	registrarURI.setPort(registrarPort);
+             //now let's register ourselves as processor for REGISTER related
+             //messages.
+             sipProviderCallback.registerMethodProcessor(Request.REGISTER, this);
+         }else{
+         	/**
+              * Added by WangYao
+              */
+         	//P2PSIP mode
+         	try{
+             	this.registrarAddress = InetAddress.getLocalHost();
+             	logger.info("this.registrarAddress = " + this.registrarAddress);
+             }catch(UnknownHostException e){
+             	logger.error("Cannot get IP address of Local Host", e);
+             	throw new ParseException("Cannot get IP address of Local Host", -1);
+             } 
+             
+            logger.info("this.registrarAddress.getHostName()=" + this.registrarAddress.getHostName());
+            
+            registrarURI = sipProvider.getAddressFactory().createSipURI(
+                     null, this.registrarAddress.getHostName());
+         	
+         	logger.info("registrarURI" + registrarURI);
 
-        registrarURI.setTransportParam(registrationTransport);
+             if(registrarPort != ListeningPoint.PORT_5060)
+                 registrarURI.setPort(registrarPort);
 
-
-        this.registrationsExpiration = expirationTimeout;
-
-        //now let's register ourselves as processor for REGISTER related
-        //messages.
-        sipProviderCallback.registerMethodProcessor(Request.REGISTER, this);
-
-        /**
-         * Added by WangYao
-         * Added the if-sentence by Dong Fengyu
-         */
-        if(sipProvider.isP2PSIP()){
-        	try {
-        		dhtAccessor = new DHTAccessServiceImpl();
-        	} catch (MalformedURLException e) {
-        		//this should never happen
-        		logger.error("exception in DHTAccessServiceImpl()", e);
-        	}
-        }
+             registrarURI.setTransportParam(registrationTransport);
+             
+             
+             this.registrationsExpiration = expirationTimeout;
+             
+             try {
+     			dhtAccessor = new DHTAccessServiceImpl();
+     		} catch (MalformedURLException e) {
+     			//this should never happen
+     			logger.error("exception in DHTAccessServiceImpl()", e);
+     		}
+         }
     }		
 
     /**
