@@ -517,6 +517,7 @@ public class OperationSetPresenceSipImpl
         ContactGroupSipImpl parentSipGroup
             = (ContactGroupSipImpl) sipContact.getParentContactGroup();
 
+
         parentSipGroup.removeContact(sipContact);
 
         // if this is a volatile contact then we haven't really subscribed to
@@ -528,6 +529,8 @@ public class OperationSetPresenceSipImpl
                                   parentSipGroup,
                                   SubscriptionEvent.SUBSCRIPTION_REMOVED);
 
+	   logger.info("if this sentence print out,volatile contact was removed");		
+
             try
             {
                 // simply change the parent of the contact, don't resubscribe
@@ -537,6 +540,8 @@ public class OperationSetPresenceSipImpl
                 fireSubscriptionEvent(sipContact,
                                       newParent,
                                       SubscriptionEvent.SUBSCRIPTION_CREATED);
+
+	   logger.info("if this sentence print out,volatile contact was moved");					
             }
             catch (Exception ex)
             {
@@ -547,7 +552,16 @@ public class OperationSetPresenceSipImpl
         }
         else
         {
+
+
+		logger.info("come into moveContactToGroup()");
+		
             ((ContactGroupSipImpl) newParent).addContact(sipContact);
+//added by dongfengyu
+
+	logger.info("contactToMove="+contactToMove);	
+	logger.info( " parentSipGroup="+parentSipGroup);
+	logger.info( " newParent="+newParent);
 
             fireSubscriptionMovedEvent(contactToMove,
                                        parentSipGroup,
@@ -3696,9 +3710,12 @@ Added by Dong Fengyu
         ContactSipImpl newVolatileContact
             = new ContactSipImpl(contactAddress, this.parentProvider);
 
+		
+//Added by Dong Fengyu
        
-	
-        newVolatileContact.setPersistent(false);
+	 newVolatileContact.setResolved(false);
+        //newVolatileContact.setPersistent(false);
+        newVolatileContact.setPersistent(true);
 
         // Check whether a volatile group already exists and if not create one
         ContactGroupSipImpl theVolatileGroup = getNonPersistentGroup();
@@ -3710,7 +3727,9 @@ Added by Dong Fengyu
                 "NotInContactList",
                 this.parentProvider);
             theVolatileGroup.setResolved(false);
-            theVolatileGroup.setPersistent(false);
+			
+            //theVolatileGroup.setPersistent(false);
+            theVolatileGroup.setPersistent(true);
 
             this.contactListRoot.addSubgroup(theVolatileGroup);
 
@@ -3723,6 +3742,8 @@ Added by Dong Fengyu
         fireSubscriptionEvent(newVolatileContact
                          , theVolatileGroup
                          , SubscriptionEvent.SUBSCRIPTION_CREATED);
+
+	logger.info("newVolatileContact ="+newVolatileContact);	
 
         return newVolatileContact;
     }

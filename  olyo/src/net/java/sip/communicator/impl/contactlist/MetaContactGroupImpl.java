@@ -456,6 +456,10 @@ public class MetaContactGroupImpl
                 return mContact;
         }
 
+//Added by Dong Fengyu		
+
+	logger.info("if this sentence printout ,means null will be return");	
+
         return null;
     }
 
