@@ -32,6 +32,7 @@ import net.java.sip.communicator.util.*;
  * <code>metaContactMoved</code>, <code>metaContactGroupAdded</code>, etc.
  * 
  * @author Yana Stamcheva
+ * @author Dong Fengyu
  */
 public class ContactList
     extends JList
@@ -825,11 +826,32 @@ public class ContactList
         Object dest = listModel.getElementAt(selectedIndex);
         if (draggedElement != null)
         {
+//Added by Dong Fengyu        
+
+		while(dest instanceof MetaContact)
+			{
+			selectedIndex--;
+			dest = listModel.getElementAt(selectedIndex);
+			}
+
+//this case will not happen
+	
             if (dest instanceof MetaContact)
             {
+
+		 logger.info("release the mouse when the right contactgroup is selected!");
+
+
+/*
+//comment by Dong Fengyu
+
                 MetaContact contactDest = (MetaContact) dest;
                 if (draggedElement.getMetaContact() != contactDest)
                 {
+
+			logger.info("draggedElement.getContact()="+draggedElement.getContact());	
+
+			
                     if (draggedElement.getContact() != null)
                     {
                         // we move the specified contact
@@ -851,9 +873,13 @@ public class ContactList
  
                     }
                 }
+ */               
             }
+
+ 
+ 
             else if (dest instanceof MetaContactGroup)
-            {
+           {
                 MetaContactGroup contactDest = (MetaContactGroup) dest;
                 if (draggedElement.getContact() != null)
                 {

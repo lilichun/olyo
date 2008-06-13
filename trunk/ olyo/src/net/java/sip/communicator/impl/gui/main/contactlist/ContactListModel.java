@@ -19,6 +19,7 @@ import net.java.sip.communicator.impl.gui.utils.*;
 import net.java.sip.communicator.service.contactlist.*;
 import net.java.sip.communicator.service.protocol.*;
 import net.java.sip.communicator.service.systray.*;
+import net.java.sip.communicator.util.*;
 
 /**
  * The list model of the ContactList. This class use as a data model the
@@ -35,6 +36,9 @@ import net.java.sip.communicator.service.systray.*;
 public class ContactListModel
     extends AbstractListModel
 {
+
+    private static final Logger logger =
+        Logger.getLogger(ContactListModel.class);
 
     private MetaContactListService contactList;
 
@@ -393,7 +397,6 @@ public class ContactListModel
     private Object getElementAt(MetaContactGroup group, int currentIndex,
         int searchedIndex)
     {
-
         Object element = null;
         if (currentIndex == searchedIndex)
         {

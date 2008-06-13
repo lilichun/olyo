@@ -1323,6 +1323,11 @@ public class MetaContactListServiceImpl
      */
     public MetaContact findMetaContactByContact(Contact contact)
     {
+
+
+      logger.info("rootMetaGroup.findMetaContactByContact(contact) ="
+	  	+rootMetaGroup.findMetaContactByContact(contact));
+	  
         return rootMetaGroup.findMetaContactByContact(contact);
     }
 
@@ -1943,8 +1948,12 @@ public class MetaContactListServiceImpl
                 return;
             }
 
+
             MetaContactImpl currentMetaContact = (MetaContactImpl)
                                findMetaContactByContact(evt.getSourceContact());
+
+//Added by Dong Fengyu
+	    logger.info("currentMetaContact ="+currentMetaContact);		
 
             if(currentMetaContact == null)
             {
