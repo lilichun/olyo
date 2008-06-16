@@ -3728,7 +3728,7 @@ Added by Dong Fengyu
                 this.parentProvider);
             theVolatileGroup.setResolved(false);
 			
-            //theVolatileGroup.setPersistent(false);
+//added by Dong Fengyu
             theVolatileGroup.setPersistent(true);
 
             this.contactListRoot.addSubgroup(theVolatileGroup);
