@@ -957,11 +957,20 @@ public class MetaContactListServiceImpl
         //first remove the meta contact from its current parent:
         MetaContactGroupImpl currentParent
             = (MetaContactGroupImpl) findParentMetaContactGroup(metaContact);
+
+	logger.info("old metaContact ="+metaContact);	
+	logger.info("old MetaContactGroupImpl ="+currentParent);	
         currentParent.removeMetaContact( (MetaContactImpl) metaContact);
+
+	logger.info("have remove the old mc");	
 
         ( (MetaContactGroupImpl) newMetaGroup).addMetaContact(
             (MetaContactImpl) metaContact);
+		
+       logger.info("new metaContact ="+metaContact);	
+	logger.info("new MetaContactGroupImpl ="+newMetaGroup);			
 
+		
         try
         {
             //first make sure that the new meta contact group path is resolved
@@ -2572,6 +2581,7 @@ public class MetaContactListServiceImpl
      * encapsulated by the meta contact that we're about to create.
      * @param accountID the identifier of the account that the contacts
      * originate from.
+     * Added by Dong Fengyu
      */
     void loadStoredMetaContact(MetaContactGroupImpl parentGroup,
                                String metaUID,
@@ -2579,6 +2589,19 @@ public class MetaContactListServiceImpl
                                List    protoContacts,
                                String accountID)
     {
+
+	    Iterator contactsIter = protoContacts.iterator();
+MclStorageManager.StoredProtoContactDescriptor contactDescriptor
+                = (MclStorageManager.StoredProtoContactDescriptor)contactsIter
+                    .next();
+	
+    MetaContact mc = findMetaContactByContact(
+                contactDescriptor.contactAddress, accountID);
+
+            if(mc == null)
+
+
+            	{
         //first check if the meta contact exists already.
         MetaContactImpl newMetaContact
             = (MetaContactImpl)findMetaContactByMetaUID(metaUID);
@@ -2598,12 +2621,13 @@ public class MetaContactListServiceImpl
                 .getSupportedOperationSets().get(OperationSetPersistentPresence
                                                     .class.getName());
 
-        Iterator contactsIter = protoContacts.iterator();
-        while (contactsIter.hasNext())
+  //      Iterator contactsIter = protoContacts.iterator();
+		
+   //     while (contactsIter.hasNext())
         {
-            MclStorageManager.StoredProtoContactDescriptor contactDescriptor
-                = (MclStorageManager.StoredProtoContactDescriptor)contactsIter
-                    .next();
+    //       MclStorageManager.StoredProtoContactDescriptor contactDescriptor
+      //          = (MclStorageManager.StoredProtoContactDescriptor)contactsIter
+      //              .next();
 
             if(contactDescriptor.contactAddress.indexOf("238431632") > -1)
                 logger.debug("asdfasdfasdfasdfasdfasdfasdf");
@@ -2613,11 +2637,16 @@ public class MetaContactListServiceImpl
             //so we'll ignore it. If this is the only contact in the meta
             //contact, we'll throw an exception at the end of the method and
             //cause the mcl storage manager to remove it.
+ /*          
             MetaContact mc = findMetaContactByContact(
                 contactDescriptor.contactAddress, accountID);
 
             if(mc != null)
             {
+
+			logger.info("mc.getParentMetaContactGroup()"
+				+mc.getParentMetaContactGroup());
+
                 logger.warn("Ignoring duplicate proto contact "
                             + contactDescriptor
                             + " accountID=" + accountID
@@ -2625,7 +2654,7 @@ public class MetaContactListServiceImpl
                             + "folloing meta contact:" + mc);
                 continue;
             }
-
+*/
 
             Contact protoContact = presenceOpSet.createUnresolvedContact(
                 contactDescriptor.contactAddress,
@@ -2636,6 +2665,7 @@ public class MetaContactListServiceImpl
 
             newMetaContact.addProtoContact(protoContact);
         }
+      
 
         if(newMetaContact.getContactCount() == 0)
         {
@@ -2649,6 +2679,9 @@ public class MetaContactListServiceImpl
         parentGroup.addMetaContact(newMetaContact);
 
         logger.trace("Created meta contact: " + newMetaContact);
+
+            	}
+		
     }
 
     /**
